@@ -6,29 +6,48 @@ body {
 }
 
 .container {
-    background-color: white;
+    background-color: #FFF1F1;
 }
 
 header {
-    background-color: #0078d7;
+    background-color: #6B3F69;
     color: white;
     text-align: center;
 }
 
 .left {
-    background-color: #e8e8e8;
+    background-color: #e4b6b6;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+}
+
+li a {
+  display: block;
+  color: #6B3F69;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+li a:hover {
+  background-color: #8D5F8C;
+  color: white;
 }
 
 .mid {
-    background-color: #efefef;
+    background-color: #ffd4d4;
 }
 
 .right {
-    background-color: #d0d0d0;
+    background-color: #e4b6b6;
 }
 
 footer {
-    background-color: #0078d7;
+    background-color: #6B3F69;
     color: white;
     text-align: center;
 }
