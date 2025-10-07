@@ -19,6 +19,7 @@ header {
     background-color: #e4b6b6;
 }
 
+/* ===== NAVIGATION ===== */
 .nav {
   margin: 0;
   padding: 0;
@@ -40,9 +41,25 @@ li a:hover {
 
 .mid {
     background-color: #ffd4d4;
-    padding: 20px 16px 10px 16px;
+    padding: 20px 16px 20px 16px;
     text-decoration: none;
+    text-align: center;
 }
+
+/* ===== IMAGE ===== */
+
+.img {
+    vertical-align: middle;
+}
+
+/* ===== TEXT ON INDEX ===== */
+p {
+    margin-top: 20px; 
+    text-align: center; 
+    color: #8D5F8C; 
+    vertical-align: middle;
+}
+
 
 .right {
     background-color: #e4b6b6;
