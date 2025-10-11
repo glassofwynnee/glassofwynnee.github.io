@@ -62,6 +62,14 @@ p {
     background-color: #e4b6b6;
 }
 
+table, th, td {
+    border: 2px solid #6B3F69;
+    border-collapse: collapse;
+    padding: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
 footer {
     background-color: #6B3F69;
     color: white;
