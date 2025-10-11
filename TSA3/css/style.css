@@ -49,6 +49,9 @@ li a:hover {
     text-align: center;
 }
 
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: disc;}
+
 /* ===== TEXT ON INDEX ===== */
 p {
     margin-top: 20px; 
