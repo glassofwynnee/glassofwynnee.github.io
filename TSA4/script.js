@@ -1,4 +1,4 @@
- /* ===== USER DATA ==== */
+/* ===== USER DATA ==== */
     const users = [];
 
      /* ===== ADD USER ==== */
@@ -18,25 +18,18 @@
         return;
       }
 
-     /* ===== USER OBJECT ==== */
-      const user = {
-        idNumber,
-        firstName,
-        middleName,
-        lastName,
-        gender,
-        birthday
-      };
-
-       /* ===== PUSH ARRAY ==== */
-      users.push(user);
-
-       /* ===== TABLE UPDATES ==== */
-      displayUsers();
+     /* ===== USER ==== */
+        const user = { idNumber, firstName, middleName, lastName, gender, birthday };
+  users.push(user);
+  displayUsers();
+  document.getElementById('signupForm').reset();
 
        /* ===== RESET TABLE ==== */
       document.getElementById('signupForm').reset();
     }
+
+/* ===== SHOW BUTTON ==== */
+     document.getElementById('nextPageContainer').style.display = 'block';
 
      /* ===== DISPALY USER LOGS ==== */
     function displayUsers() {
