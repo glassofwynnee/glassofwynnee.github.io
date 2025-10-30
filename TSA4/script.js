@@ -60,6 +60,11 @@
      /* ===== DOM EVENT ==== */
     document.getElementById('saveBtn').addEventListener('click', addUser);
 
+    /* ===== REDIRECT TO INDEX ==== */
+ document.getElementById('nextPageBtn').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+    
      /* ===== BACKGROUND ==== */
     const inputs = document.querySelectorAll('input, select');
     inputs.forEach(input => {
