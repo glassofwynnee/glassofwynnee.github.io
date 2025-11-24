@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ArtEvo | Art is Evolving through Us </title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* --- LEFT SIDE (LOGO + BACKGROUND) --- */
+        .left {
+            flex: 1;
+            background: #1877f2; /* Facebook-like color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* --- RIGHT SIDE (SIGN UP FORM) --- */
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .signup-box {
+            width: 80%;
+            max-width: 350px;
+        }
+
+        .signup-box h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            border: none;
+            background: #1877f2;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #145dbf;
+        }
+
+        .message {
+            margin-top: 15px;
+            color: green;
+            font-size: 14px;
+            display: none;
+        }
+
+        /* --- RESPONSIVE SCREEN SIZES --- */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left {
+                height: 40vh;
+                font-size: 2rem;
+            }
+            .right {
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+        <div class="left">
+            LOGO
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right">
+            <div class="signup-box">
+                <h2>Create an Account</h2>
+
+                <input type="text" id="userInput" placeholder="Username, Email, or Phone Number">
+                <input type="password" id="passwordInput" placeholder="Password">
+
+                <button id="signupBtn">Sign Up</button>
+
+                <div class="message" id="successMessage">Account created! Redirecting...</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- VARIABLES TO STORE USER INPUT ---
+        let userValue = "";
+        let passwordValue = "";
+
+        // --- OBJECT TO ORGANIZE DATA ---
+        const userData = {
+            usernameOrEmailOrPhone: "",
+            password: ""
+        };
+
+        // DOM elements
+        const userInput = document.getElementById("userInput");
+        const passwordInput = document.getElementById("passwordInput");
+        const signupBtn = document.getElementById("signupBtn");
+        const successMsg = document.getElementById("successMessage");
+
+        // --- DOM EVENT: INPUT CHANGE ---
+        userInput.addEventListener("input", () => {
+            userValue = userInput.value;
+        });
+
+        passwordInput.addEventListener("input", () => {
+            passwordValue = passwordInput.value;
+        });
+
+        // --- DOM EVENT: BUTTON CLICK ---
+        signupBtn.addEventListener("click", () => {
+
+            // Store values inside object
+            userData.usernameOrEmailOrPhone = userValue;
+            userData.password = passwordValue;
+
+            // Simple validation
+            if (userValue === "" || passwordValue === "") {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // --- DYNAMIC PAGE UPDATE ---
+            successMsg.style.display = "block";
+
+            // Simulate redirect after 1.5 seconds
+            setTimeout(() => {
+                window.location.href = "home.html"; // <-- redirect to home page
+            }, 1500);
+        });
+    </script>
+
+</body>
+</html>
